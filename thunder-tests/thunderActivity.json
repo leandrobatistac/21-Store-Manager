@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-04-03T02:03:52.184Z",
-    "modified": "2023-04-03T02:03:52.184Z",
+    "modified": "2023-04-03T06:15:57.206Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -28,6 +28,34 @@
     "tests": []
   },
   {
+    "_id": "3c724d15-1479-4ceb-89e7-165f8a0ad29e",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales",
+    "url": "localhost:3001/sales",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-03T02:03:52.184Z",
+    "modified": "2023-04-03T06:25:31.853Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "995f1c2e-6ae7-46b8-a838-b1ccbaf362f3",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales/id",
+    "url": "localhost:3001/sales/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-03T02:03:52.184Z",
+    "modified": "2023-04-03T08:27:16.085Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
     "_id": "b9ae37ac-7aad-40b2-99a0-93ae52529443",
     "colId": "history",
     "containerId": "",
@@ -36,12 +64,31 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-04-03T03:15:21.354Z",
-    "modified": "2023-04-03T04:45:16.153Z",
+    "modified": "2023-04-03T06:17:33.091Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"P\"\n}",
+      "raw": "{\n  \"name\": \"Testeeee\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "55724994-02d4-4c97-b224-645a1617ae27",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/sales",
+    "url": "http://localhost:3001/sales",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-03T03:15:21.354Z",
+    "modified": "2023-04-03T16:33:01.071Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 10,\n    \"quantity\": 1\n  },\n  {\n    \"productId\": 1,\n    \"quantity\": 1\n  }\n]",
       "form": []
     },
     "tests": []
