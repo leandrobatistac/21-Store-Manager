@@ -111,5 +111,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "6fc41780-5090-425d-9dba-6a425d146661",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3001/products/id",
+    "url": "http://localhost:3001/products/3",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-04-03T03:15:21.354Z",
+    "modified": "2023-04-03T22:15:18.975Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Viol2\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
