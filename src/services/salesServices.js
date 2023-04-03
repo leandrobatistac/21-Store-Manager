@@ -8,6 +8,11 @@ const getAllSales = async () => {
 
 const getSaleById = async (id) => {
   const saleById = await salesModel.getSaleById(id);
+
+  const saleExist = await salesModel.saleExists(id);
+  if (!saleExist) {
+    throw new Error(400, 'ID not found');
+  }
   return saleById;
 };
 

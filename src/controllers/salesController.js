@@ -9,7 +9,7 @@ const getAllSales = async (req, res, next) => {
   }
 };
 
-const getSaleById = async (req, res, next) => {
+const getSaleById = async (req, res) => {
   try { 
   const { id } = req.params;
   const saleById = await salesServices.getSaleById(id);
@@ -17,10 +17,10 @@ const getSaleById = async (req, res, next) => {
   if (!saleById) {
     return res.status(404).json({ message: 'Sale not found' });
   }
-    
+
   res.status(200).json(saleById);
   } catch (e) {
-    next(e);
+    return res.status(404).json({ message: 'Sale not found' });
   }
 };
 
