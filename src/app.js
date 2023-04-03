@@ -8,6 +8,7 @@ app.get('/', (_request, response) => {
   response.send();
 });
 
+app.use(express.json());
 app.use('/products', productsRouter);
 app.use('/sales', salesRouter);
 

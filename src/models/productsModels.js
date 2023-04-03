@@ -1,4 +1,4 @@
-const connection = require('./connection');
+const connection = require('../database/connection');
 
 const getProducts = async () => {
   const newQuery = 'SELECT * FROM StoreManager.products';
@@ -12,7 +12,14 @@ const getProductsById = async (id) => {
   return productById;
 };
 
+const createNewProduct = async (name) => {
+  const newQuery = 'INSERT INTO StoreManager.products (name) VALUES (?)';
+  const newProduct = await connection.execute(newQuery, [name]);
+  return newProduct;
+};
+
 module.exports = {
   getProducts,
   getProductsById,
+  createNewProduct,
 };
