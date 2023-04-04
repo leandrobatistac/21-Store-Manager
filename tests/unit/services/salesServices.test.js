@@ -20,4 +20,33 @@ describe('Testa a camada Services de Sales', function () {
     sinon.restore()
 
   });
+
+  it('Testa o GET de todos os produtos', async function () {
+    const mock = [
+      {
+        "saleId": 1,
+        "date": "2023-04-04T02:17:35.000Z",
+        "productId": 1,
+        "quantity": 5
+      },
+      {
+        "saleId": 1,
+        "date": "2023-04-04T02:17:35.000Z",
+        "productId": 2,
+        "quantity": 10
+      },
+      {
+        "saleId": 2,
+        "date": "2023-04-04T02:17:35.000Z",
+        "productId": 3,
+        "quantity": 15
+      }
+    ];
+
+    sinon.stub(salesModels, "getAllSales").resolves();
+    const result = await salesServices.getAllSales();
+    expect(result).to.be.equal(mock);
+
+    sinon.restore()
+  })
 });
