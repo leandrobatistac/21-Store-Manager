@@ -12,8 +12,8 @@ describe('Testa a camada Services de Sales', function () {
       "message": "Sale not found"
     };
 
-    sinon.stub(salesModels, "getSaleById").resolves();
-    sinon.stub(salesModels, "saleExists").resolves();
+    sinon.stub(salesModels, "getSaleById").resolves(mock);
+    sinon.stub(salesModels, "saleExists").resolves(mock);
     const result = await salesServices.getSaleById(999);
     expect(result).to.be.deep.equal(mock);
 
@@ -43,7 +43,7 @@ describe('Testa a camada Services de Sales', function () {
       }
     ];
 
-    sinon.stub(salesModels, "getAllSales").resolves();
+    sinon.stub(salesModels, "getAllSales").resolves(mock);
     const result = await salesServices.getAllSales();
     expect(result).to.be.equal(mock);
 
